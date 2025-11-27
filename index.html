@@ -4,18 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبد الحميد للملابس</title>
-    <!-- أيقونة الموقع (قميص/ملابس) -->
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3159/3159614.png" type="image/png">
+
+    <!-- 1. العنوان الذي يظهر في الرابط الأزرق في جوجل -->
+    <title>عبد الحميد للملابس | أفضل ملابس رجالي في شبرا الخيمة</title>
+
     <meta name="google-site-verification" content="M4AVPnmakVfGb3OU5CIqN--Dqi4C-6KYQn-MhFM0ymU" />
 
+    <!-- 2. الوصف الذي يظهر تحت العنوان في البحث (مهم جداً لجذب الزبائن) -->
+    <meta name="description"
+        content="تسوّق أحدث صيحات الموضة من عبد الحميد للملابس في شبرا الخيمة، أرض ابن الحكم. تشكيلة واسعة من الملابس الرجالي والشبابي، بنطلونات، وتيشرتات بخامات عالية وأسعار مميزة. تليفون: 01121129942">
+
+    <!-- 3. الكلمات المفتاحية (Keywords) -->
+    <meta name="keywords"
+        content="عبد الحميد للملابس, محل ملابس شبرا الخيمة, ملابس رجالي أرض ابن الحكم, بنطلونات جينز, تيشرتات شبابي, قمصان رجالي, أرخص محل ملابس, 01121129942">
+
+    <!-- 4. تحديد المنطقة الجغرافية (Local SEO) -->
+    <meta name="geo.region" content="EG-Ql" /> <!-- القليوبية -->
+    <meta name="geo.placename" content="Shubra Al Khaymah" />
+    <meta name="geo.position" content="30.1286;31.2422" /> <!-- إحداثيات تقريبية لشبرا -->
+    <meta name="ICBM" content="30.1286, 31.2422" />
+
+    <!-- أيقونة الموقع -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3159/3159614.png" type="image/png">
+
+    <!-- بقية الروابط والسكربتات كما هي -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
-    <!-- مكتبات فيرباس -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
+    <!-- كود البيانات المنظمة (Schema) ليظهر المحل كنشاط تجاري في جوجل -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "عبد الحميد للملابس",
+    "image": "https://cdn-icons-png.flaticon.com/512/3159/3159614.png",
+    "telephone": "01121129942",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "أرض ابن الحكم",
+        "addressLocality": "شبرا الخيمة",
+        "addressRegion": "القليوبية",
+        "addressCountry": "EG"
+    },
+    "priceRange": "$$"
+    }
+    </script>
     <style>
         :root {
             /* ألوان تعبر عن الأناقة والملابس (كحلي - ذهبي - رمادي) */
@@ -578,15 +613,20 @@
     <!-- Navbar -->
     <header>
         <div class="logo-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3159/3159614.png" alt="Abdul Hamid" class="logo-img">
-            <div class="logo-text">عبد الحميد للملابس</div>
+            <!-- تحسين وصف الصورة (alt) ليقرأه جوجل -->
+            <img src="https://cdn-icons-png.flaticon.com/512/3159/3159614.png"
+                alt="شعار محل عبد الحميد للملابس - شبرا الخيمة" class="logo-img">
+
+            <!-- تغيير div إلى h1 لتقوية الأرشفة -->
+            <h1 class="logo-text">عبد الحميد للملابس</h1>
         </div>
         <div>
-            <button class="nav-btn" onclick="openModal('cartModal')">
+            <!-- أزرار التنقل -->
+            <button class="nav-btn" onclick="openModal('cartModal')" aria-label="سلة المشتريات">
                 <i class="fas fa-shopping-bag"></i>
                 <span class="badge" id="cartCount">0</span>
             </button>
-            <button class="nav-btn" onclick="openModal('adminLoginModal')">
+            <button class="nav-btn" onclick="openModal('adminLoginModal')" aria-label="دخول المسؤول">
                 <i class="fas fa-user-tie"></i>
             </button>
         </div>
@@ -1170,6 +1210,5 @@
         }
     </script>
 </body>
-
 
 </html>
